@@ -589,9 +589,10 @@ input {
 	&__nav {
 		list-style-type: none;
 		padding: 0;
+		margin-top: 20px;
 
 		li {
-			margin-bottom: 25px;
+			margin-bottom: 20px;
 
 			&:last-of-type {
 				margin-bottom: 0;
@@ -616,7 +617,11 @@ input {
 
 	&__contacts {
 		display: block;
-		margin-bottom: 25px;
+		margin-bottom: 20px;
+
+		&:first-of-type {
+			margin-top: 20px;
+		}
 
 		&:last-of-type {
 			margin-bottom: 0;
@@ -628,7 +633,7 @@ input {
 	}
 
 	&__copyright {
-		margin-top: 70px;
+		margin-top: 65px;
 		font-size: 15px;
 		color: white;
 	}
