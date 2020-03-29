@@ -336,9 +336,6 @@ input {
 
 				&__left {
 					margin-right: 10px;
-					display: flex;
-					flex-wrap: wrap;
-					justify-content: center;
 				}
 
 				&__item {
@@ -353,6 +350,15 @@ input {
 					margin-right: 15px;
 					margin-bottom: 15px;
 					text-align: center;
+
+					&:last-of-type {
+						margin-right: 0;
+					}
+				}
+
+				&__row {
+					display: flex;
+					justify-content: center;
 				}
 			}
 		}
