@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link rel="stylesheet" type="text/css" href="res/css/app.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css"> -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
 <body class="index-page">
@@ -17,24 +16,31 @@
 					<span>10.567 - Изделий сделанных вручную</span>
 				</div>
 				<div class="pre-header__right">
-					<nav class="pre-header__nav">
-						<ul>
-							<li>
-								<a href="#">Каталог</a>
-							</li>
-							<li>
-								<a href="#">О нас</a>
-							</li>
-							<li>
-								<a href="#">Мероприятия</a>
-							</li>
-							<li>
-								<a href="#">Контакты</a>
-							</li>
-						</ul>
-					</nav>
-					<div class="pre-header__lang">
-						<span>Язык: RU</span>
+					<div class="pre-header__right__menu-button" onclick="togglePreHeaderMenu()">
+						<div class="line"></div>
+						<div class="line"></div>
+						<div class="line"></div>
+					</div>					
+					<div class="pre-header__right__content" id="pre-header-menu">
+						<nav class="pre-header__nav">
+							<ul>
+								<li>
+									<a href="#">Каталог</a>
+								</li>
+								<li>
+									<a href="#">О нас</a>
+								</li>
+								<li>
+									<a href="#">Мероприятия</a>
+								</li>
+								<li>
+									<a href="#">Контакты</a>
+								</li>
+							</ul>
+						</nav>
+						<button class="pre-header__lang">
+							<span>Язык: RU</span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -72,7 +78,6 @@
 		</div>
 		<div class="header__bottom">
 			<div class="header__bottom-line"></div>
-			<div class="header__bottom-rect"></div>
 		</div>
 	</header>
 	<main>
@@ -95,42 +100,33 @@
 							<p class="index-page__section-pics__item__overlay__text small">
 								Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
 							</p>
-							<button class="index-page__section-pics__item__overlay__buy small">
+							<button class="index-page__section-pics__item__overlay__buy small" onclick="toggleModal()">
 								<span>Приобрести</span>
 							</button>
 						</div>
 					</div>
 					<div class="index-page__section-pics__item">
 						<img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
+						<div class="index-page__section-pics__item__overlay">
+							<div class="white-blur"></div>
+							<p class="index-page__section-pics__item__overlay__text">
+								Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
+							</p>
+							<button class="index-page__section-pics__item__overlay__buy" onclick="toggleModal()">
+								<span>Приобрести</span>
+							</button>
+						</div>
 						<div class="index-page__section-pics__item__slider">
-							<div class="swiper-container">
+							<div class="swiper-container" id="pic-slider">
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">
 										<img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
-										<div class="index-page__section-pics__item__overlay">
-											<div class="white-blur"></div>
-											<p class="index-page__section-pics__item__overlay__text">
-												Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
-											</p>
-											<button class="index-page__section-pics__item__overlay__buy">
-												<span>Приобрести</span>
-											</button>
-										</div>
 									</div>
 									<div class="swiper-slide">
 										<img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
-										<div class="index-page__section-pics__item__overlay">
-											<div class="white-blur"></div>
-											<p class="index-page__section-pics__item__overlay__text">
-												Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
-											</p>
-											<button class="index-page__section-pics__item__overlay__buy">
-												<span>Приобрести</span>
-											</button>
-										</div>
 									</div>
 								</div>
-								<div class="swiper-pagination"></div>
+								<div class="swiper-pagination" id="pic-slider-pagination"></div>
 							</div>
 						</div>
 					</div>
@@ -238,18 +234,18 @@
 		<section class="index-page__section-events custom-container">
 			<h2 class="section-header index-page__section-events__title">Мероприятия</h2>
 			<span class="index-page__section-events__subtitle">С момента основания мы учавствовали во многих мероприятиях.</span>
-			<div class="index-page__section-events__card">
+			<a href="#" class="index-page__section-events__card">
 				<img src="res/pics/section3/pic1.png">
 				<p>
-					В 2018 году наша продукция была представлена на знаменитой выставке моды “AZERBAIJAN FASHION WEEEK”
+					В 2018 году наша продукция была представлена на знаменитой выставке моды “AZERBAIJAN FASHION WEEK”
 				</p>
-			</div>
-			<div class="index-page__section-events__card flipped">
+			</a>
+			<a href="#" class="index-page__section-events__card flipped">
 				<img src="res/pics/section3/pic2.png">
 				<p>
 					В 2018 году наша продукция была представлена на знаменитой выставке моды “AZERBAIJAN FASHION WEEK”
 				</p>
-			</div>
+			</a>
 		</section>
 		<section class="index-page__section-contacts">
 			<div class="intex-page__section-contacts__inner custom-container">
@@ -258,14 +254,16 @@
 					<div class="index-page__section-contacts__left">
 						<div class="index-page__section-contacts__info">
 							<a href="tel:+994557916591" class="index-page__section-contacts__info__item">
-								<span class="bold">Номер</span>: +994 (55) 791 - 65 - 91
+								<span class="bold">Номер:</span>+994 (55) 791 - 65 - 91
 							</a>
 							<a href="mailto:khuramankaplan@gmail.com" class="index-page__section-contacts__info__item">
-								<span class="bold">Mail</span>: khuramankaplan@gmail.com
+								<span class="bold">Mail:</span>khuramankaplan@gmail.com
 							</a>
 						</div>
 						<div class="index-page__section-contacts__info__card">
-							<span>Также можете позвонить нам и мы сделаем ваш аксессуар на заказ!</span>
+							<div class="index-page__section-contacts__info__card__inner">
+								<span>Также можете позвонить нам и мы сделаем ваш аксессуар на заказ!</span>
+							</div>
 						</div>
 					</div>
 					<div class="index-page__section-contacts__right">
@@ -293,7 +291,7 @@
 					</div>
 					<div class="index-page__section-contacts__mailing__input-area">
 						<input type="text" name="name" placeholder="Ваше имя">
-						<input type="email" name="name" placeholder="Ваше email">
+						<input type="email" name="name" placeholder="Ваш email">
 					</div>
 					<button class="index-page__section-contacts__mailing__send">
 						<span>Отправить</span>
@@ -302,10 +300,10 @@
 			</div>
 		</section>
 	</main>
-	<footer class="footer">
+	<footer class="footer desktop">
 		<div class="custom-container">
 			<div class="footer__inner ">
-				 <div class="footer__col">
+				<div class="footer__col">
 				 	<ul class="footer__nav">
 				 		<li>
 				 			<a href="#">Каталог</a>
@@ -314,25 +312,25 @@
 				 			<a href="#">О нас</a>
 				 		</li>
 				 		<li>			 			
-				 			<a href="#" class="active">Мероприятия</a>
+				 			<a href="#">Мероприятия</a>
 				 		</li>
 				 		<li>
 				 			<a href="#">Контакты</a>
 				 		</li>
 				 	</ul>
-				 </div>
-				 <div class="footer__col">
+				</div>
+				<div class="footer__col">
 				 	<span class="footer__contacts">Контакты:</span>
 				 	<a href="tel:+994557916591" class="footer__contacts">
-				 		<span class="bold">Номер: +994 (55) 791 - 65 - 91</span>
+				 		<span class="bold"><span class="margin">Номер:</span>+994 (55) 791 - 65 - 91</span>
 				 	</a>
 				 	<a href="mailto:khuramankaplan@gmail.com" class="footer__contacts">
-				 		<span class="bold">Mail</span>: khuramankaplan@gmail.com
+				 		<span class="bold margin">Mail:</span>khuramankaplan@gmail.com
 				 	</a>
 				 	<span class="footer__copyright">© Kaplan Khuraman 2020.</span>
 				 	<span class="footer__all-rights-reserved">Все права защищены</span>
-				 </div>
-				 <div class="footer__col footer__social__wrapper">
+				</div>
+				<div class="footer__col footer__social__wrapper">
 				 	<div class="footer__social">
 				 		<a href="#" class="footer__social__link">
 				 			<img src="res/svg/footer/fb.svg">
@@ -345,22 +343,169 @@
 				 		</a>
 				 		<img class="footer__qr" src="res/svg/ig-qr.svg">
 				 	</div>
-				 </div>
+				</div>
 			</div>
 		</div>
 	</footer>
 
+	<footer class="footer mobile">
+		<div class="custom-container">
+			<div class="footer__inner ">
+				<div class="footer__col">
+				 	<ul class="footer__nav">
+				 		<li>
+				 			<a href="#">Каталог</a>
+				 		</li>
+				 		<li>
+				 			<a href="#">О нас</a>
+				 		</li>
+				 		<li>			 			
+				 			<a href="#">Мероприятия</a>
+				 		</li>
+				 		<li>
+				 			<a href="#">Контакты</a>
+				 		</li>
+				 	</ul>
+				</div>
+				<div class="footer__col footer__social__wrapper">
+				 	<div class="footer__social">
+				 		<a href="#" class="footer__social__link">
+				 			<img src="res/svg/footer/fb.svg">
+				 		</a>
+				 		<img class="footer__qr" src="res/svg/fb-qr.svg">
+				 	</div>
+				 	<div class="footer__social">
+				 		<a href="#" class="footer__social__link">
+				 			<img src="res/svg/footer/ig.svg">
+				 		</a>
+				 		<img class="footer__qr" src="res/svg/ig-qr.svg">
+				 	</div>
+				</div>
+				<div class="footer__col">
+				 	<span class="footer__contacts">Контакты:</span>
+				 	<a href="tel:+994557916591" class="footer__contacts">
+				 		<span class="bold"><span class="margin">Номер:</span>+994 (55) 791 - 65 - 91</span>
+				 	</a>
+				 	<a href="mailto:khuramankaplan@gmail.com" class="footer__contacts">
+				 		<span class="bold margin">Mail:</span>khuramankaplan@gmail.com
+				 	</a>
+				 	<span class="footer__copyright">© Kaplan Khuraman 2020.</span>
+				 	<span class="footer__all-rights-reserved">Все права защищены</span>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<div class="modal-buy content-hidden" id="modal" style="display: none;">
+		<div class="modal-buy__bg" onclick="toggleModal()"></div>
+		<div class="modal-buy__card">
+			<div class="modal-buy__card__wrapper">
+				<div class="modal-buy__close-button" onclick="toggleModal()">
+					<img src="res/svg/close.svg">
+				</div>
+				<div class="swiper-container" id="modal-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<img class="modal-buy__card__bg" src="res/pics/modal-bg.png">
+						</div>
+						<div class="swiper-slide">
+							<img class="modal-buy__card__bg" src="res/pics/modal-bg.png">
+						</div>
+					</div>
+					<div class="swiper-pagination" id="modal-slider-pagination"></div>
+					<button class="modal-buy__button only" onclick="modalButton()">
+						<span>45 azn</span>
+					</button>
+				</div>
+				<div class="modal-buy__card__inner">
+					<div class="white-blur"></div>
+					<div class="modal-buy__card__content">
+						<h2 class="modal-buy__title">Заколки с бабочками сделанные из шёлка, с нержавеющей сталью</h2>
+						<div class="modal-buy__subtitle-line"></div>
+						<form class="modal-buy__form">
+							<div class="modal-buy__form__three-in-a-row">
+								<div class="modal-buy__form__input-area">
+									<span>Имя</span>
+									<input type="text" name="first-name" placeholder="Введите имя" required>
+								</div>
+								<div class="modal-buy__form__input-area">
+									<span>Фамилия</span>
+									<input type="text" name="last-name" placeholder="Введите фамилию" required>
+								</div>
+								<div class="modal-buy__form__input-area">
+									<span>Мобильный телефон</span>
+									<input type="text" name="phone" placeholder="+994 (__) ___ __ __" required>
+								</div>
+							</div>
+							<div class="modal-buy__bottom-input-area">
+								<div class="modal-buy__form__input-area">
+									<span>Адрес доставки</span>
+									<textarea placeholder="Введите ваш адрес" maxlength="300" required></textarea>
+								</div>
+							</div>
+							<button class="modal-buy__button" onclick="modalButton()">
+								<span>45 azn</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<script src="https://unpkg.com/swiper/js/swiper.js"></script>
 	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
 	<script type="text/javascript">
-		let mySwiper = new Swiper('.swiper-container', {
-		    slidesPerView: 1,
-		    loop: true,
-		    pagination: {
-		    	el: '.swiper-pagination',
-		    	clickable: true
-		    }
+		let mySwiper = new Swiper('#pic-slider', {
+			slidesPerView: 1,
+			loop: true,
+			pagination: {
+				el: '#pic-slider-pagination',
+				clickable: true
+			}
 		});
+
+		let mySwiper2 = new Swiper('#modal-slider', {
+			slidesPerView: 1,
+			observer: true,
+			observeParents: true,
+			loop: true,
+			pagination: {
+				el: '#modal-slider-pagination',
+				clickable: true
+			}
+		});
+
+		let isPreHeaderMenuOpen = false;
+		const togglePreHeaderMenu = () => {
+			if (window.innerWidth <= 800) {
+				if (isPreHeaderMenuOpen)
+					document.querySelector('#pre-header-menu').classList.remove('active');
+				else document.querySelector('#pre-header-menu').classList.add('active');
+				
+				isPreHeaderMenuOpen = !isPreHeaderMenuOpen;
+			}
+		}
+
+		let isModalContentShown = false;
+		const modalButton = () => {
+			if (!isModalContentShown) {
+				isModalContentShown = true;
+				document.querySelector('#modal').classList.remove('content-hidden');
+				return;
+			}
+		}
+
+		let isModalOpen = false;
+		const toggleModal = () => {
+			if (!isModalOpen)
+				document.querySelector('#modal').style.display = '';
+			else document.querySelector('#modal').style.display = 'none';
+			
+			isModalOpen = !isModalOpen;
+			isModalContentShown = false;
+			document.querySelector('#modal').classList.add('content-hidden');
+		}
 	</script>
 </body>
 </html>

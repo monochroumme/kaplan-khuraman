@@ -43,7 +43,7 @@ function watch() {
             baseDir: "./"
         }
     });
-    gulp.watch([paths.styles.src, "./*.html", "./**/.svg", "./**/.png"], gulp.series(style, reload));
+    gulp.watch([paths.styles.src, "./*.html"], gulp.series(style, reload));
 }
 
 exports.default = gulp.series(watch);
