@@ -1,524 +1,608 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Kaplan Khuraman Accessories</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" type="text/css" href="res/css/app.css">
-	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900&display=swap&subset=cyrillic" rel="stylesheet">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <title>Kaplan Khuraman Accessories</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="res/css/app.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,400,500,600,700,800,900&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
 </head>
+
 <body class="index-page">
-	<header class="header">
-		<div class="pre-header-wrapper">
-			<div class="pre-header custom-container">
-				<div class="pre-header__left">
-					<span>10.567 - Изделий сделанных вручную</span>
-				</div>
-				<div class="pre-header__right">
-					<div class="pre-header__right__menu-button" onclick="togglePreHeaderMenu()">
-						<div class="line"></div>
-						<div class="line"></div>
-						<div class="line"></div>
-					</div>					
-					<div class="pre-header__right__content" id="pre-header-menu">
-						<nav class="pre-header__nav">
-							<ul>
-								<li>
-									<a href="#">Каталог</a>
-								</li>
-								<li>
-									<a href="#">О нас</a>
-								</li>
-								<li>
-									<a href="#">Мероприятия</a>
-								</li>
-								<li>
-									<a href="#">Контакты</a>
-								</li>
-							</ul>
-						</nav>
-						<button class="pre-header__lang">
-							<span>Язык: RU</span>
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="header__menu custom-container">
-			<div class="header__menu__left">
-				<a href="#"><img src="res/svg/logo-header.svg"></a>
-			</div>
-			<div class="header__menu__right">
-				<a href="#obodki" class="header__menu__right__item" onclick="showTab('#tab-obodki')">
-					<div class="header__menu__right__item__icon">
-						<img src="res/svg/menu/obodki.svg">
-					</div>
-					<span class="header__menu__right__item__title">Ободки</span>
-				</a>
-				<a href="#butterflies" class="header__menu__right__item" onclick="showTab('#tab-butterflies')">
-					<div class="header__menu__right__item__icon">
-						<img src="res/svg/menu/butterfly.svg">
-					</div>
-					<span class="header__menu__right__item__title">Изделия “Бабочки”</span>
-				</a>
-				<a href="#summer" class="header__menu__right__item" onclick="showTab('#tab-summer')">
-					<div class="header__menu__right__item__icon">
-						<img src="res/svg/menu/summercol.svg">
-					</div>
-					<span class="header__menu__right__item__title">Летняя коллекция</span>
-				</a>
-				<a href="#winter" class="header__menu__right__item" onclick="showTab('#tab-winter')">
-					<div class="header__menu__right__item__icon">
-						<img src="res/svg/menu/wintercol.svg">
-					</div>
-					<span class="header__menu__right__item__title">Зимняя коллекция</span>
-				</a>
-			</div>
-		</div>
-		<div class="header__bottom">
-			<div class="header__bottom-line"></div>
-		</div>
-	</header>
-	<main>
-		<section class="index-page__section-pics custom-container">
-			<div class="index-page__section-pics__inner pics-tab active" id="tab-obodki">
-				<div class="index-page__section-pics__row">
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic1.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic2.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic3.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic4.png" class="index-page__section-pics__item__pic">
-						<div class="index-page__section-pics__item__overlay small">
-							<div class="white-blur"></div>
-							<p class="index-page__section-pics__item__overlay__text small">
-								Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
-							</p>
-							<button class="index-page__section-pics__item__overlay__buy small" onclick="toggleModal()">
-								<span>Приобрести</span>
-							</button>
-						</div>
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
-						<div class="index-page__section-pics__item__overlay">
-							<div class="white-blur"></div>
-							<p class="index-page__section-pics__item__overlay__text">
-								Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
-							</p>
-							<button class="index-page__section-pics__item__overlay__buy" onclick="toggleModal()">
-								<span>Приобрести</span>
-							</button>
-						</div>
-						<div class="index-page__section-pics__item__slider">
-							<div class="swiper-container" id="pic-slider">
-								<div class="swiper-wrapper">
-									<div class="swiper-slide">
-										<img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
-									</div>
-									<div class="swiper-slide">
-										<img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
-									</div>
-								</div>
-								<div class="swiper-pagination" id="pic-slider-pagination"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="index-page__section-pics__row">
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic6.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic7.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic8.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic9.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic10.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic11.png" class="index-page__section-pics__item__pic">
-					</div>
-					<div class="index-page__section-pics__item">
-						<img src="res/pics/section1/pic12.png" class="index-page__section-pics__item__pic">
-					</div>
-				</div>
-			</div>
-			<div class="index-page__section-pics__inner pics-tab" id="tab-butterflies">
-			</div>
-			<div class="index-page__section-pics__inner pics-tab" id="tab-summer">
-			</div>
-			<div class="index-page__section-pics__inner pics-tab" id="tab-winter">
-			</div>
-		</section>
-		<section class="index-page__section-about">
-			<div class="custom-container">
-				<div class="index-page__section-about__info-area">
-					<div class="index-page__section-about__left">
-						<img src="res/svg/logo-main.svg" alt="Kaplan Khuraman accessories">
-					</div>
-					<div class="index-page__section-about__right">
-						<h2 class="section-header index-page__section-about__right__title">О нас</h2>
-						<p class="index-page__section-about__info">
-							Наша компания была основана в 2010 году, дизайнером Хураман. Наша продукция в основном акцентируется на бабочках и вся продукция в свою очередь сделана руками человека! Вся наша продукция высокого качества легко доступна и уникальна.
-						</p>
-					</div>
-				</div>
-				<div class="index-page__section-about__materials">
-					<h4 class="index-page__section-about__materials__title">В нашей продукции присутствуют такие материалы как:</h4>
-					<div class="index-page__section-about__materials__line"></div>
-					<div class="index-page__section-about__materials__inner">
-						<div class="index-page__section-about__materials__left">
-							<div class="index-page__section-about__materials__row">
-								<div class="index-page__section-about__materials__item">
-									<span>Шелк</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Хлопок</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Камень “SWAROVSKI”</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Лунный камень</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Хлопок</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Камень “SWAROVSKI”</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Лунный камень</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Шелк</span>
-								</div>
-							</div>
-							<div class="index-page__section-about__materials__row">
-								<div class="index-page__section-about__materials__item">
-									<span>Хлопок</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Камень “SWAROVSKI”</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Лунный камень</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Хлопок</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Камень “SWAROVSKI”</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Лунный камень</span>
-								</div>
-								<div class="index-page__section-about__materials__item">
-									<span>Лунный камень</span>
-								</div>
-							</div>
-						</div>
-						<div class="index-page__section-about__materials__right">
-							<img src="res/svg/logo-faded.svg">
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="index-page__section-events custom-container">
-			<h2 class="section-header index-page__section-events__title">Мероприятия</h2>
-			<span class="index-page__section-events__subtitle">С момента основания мы учавствовали во многих мероприятиях.</span>
-			<a href="#" class="index-page__section-events__card">
-				<img src="res/pics/section3/pic1.png">
-				<p>
-					В 2018 году наша продукция была представлена на знаменитой выставке моды “AZERBAIJAN FASHION WEEK”
-				</p>
-			</a>
-			<a href="#" class="index-page__section-events__card flipped">
-				<img src="res/pics/section3/pic2.png">
-				<p>
-					В 2018 году наша продукция была представлена на знаменитой выставке моды “AZERBAIJAN FASHION WEEK”
-				</p>
-			</a>
-		</section>
-		<section class="index-page__section-contacts">
-			<div class="intex-page__section-contacts__inner custom-container">
-				<h2 class="section-header index-page__section-contacts__title">Контакты</h2>
-				<div class="index-page__section-contacts__info-area">
-					<div class="index-page__section-contacts__left">
-						<div class="index-page__section-contacts__info">
-							<a href="tel:+994557916591" class="index-page__section-contacts__info__item">
-								<span class="bold">Номер:</span>+994 (55) 791 - 65 - 91
-							</a>
-							<a href="mailto:khuramankaplan@gmail.com" class="index-page__section-contacts__info__item">
-								<span class="bold">Mail:</span>khuramankaplan@gmail.com
-							</a>
-						</div>
-						<div class="index-page__section-contacts__info__card">
-							<div class="index-page__section-contacts__info__card__inner">
-								<span>Также можете позвонить нам и мы сделаем ваш аксессуар на заказ!</span>
-							</div>
-						</div>
-					</div>
-					<div class="index-page__section-contacts__right">
-						<div class="index-page__section-contacts__right__links">
-							<div class="index-page__section-contacts__right__link__wrapper">
-								<a href="#" class="index-page__section-contacts__right__link">
-									<img src="res/svg/contacts/fb.svg">
-								</a>
-							</div>
-							<div class="index-page__section-contacts__right__link__wrapper">
-								<a href="#" class="index-page__section-contacts__right__link">
-									<img src="res/svg/contacts/ig.svg">
-								</a>
-							</div>
-						</div>
-						<div class="index-page__section-contacts__right__qrs">
-							<img src="res/svg/fb-qr.svg">
-							<img src="res/svg/ig-qr.svg">
-						</div>
-					</div>
-				</div>
-				<form method="post" class="index-page__section-contacts__mailing-area">
-					<div class="index-page__section-contacts__mailing">
-						<span>Оcтавьте ваш email для получения рассылки о новых товарах</span>
-					</div>
-					<div class="index-page__section-contacts__mailing__input-area">
-						<input type="text" name="name" placeholder="Ваше имя">
-						<input type="email" name="name" placeholder="Ваш email">
-					</div>
-					<button class="index-page__section-contacts__mailing__send">
-						<span>Отправить</span>
-					</button>
-				</form>
-			</div>
-		</section>
-	</main>
-	<footer class="footer desktop">
-		<div class="custom-container">
-			<div class="footer__inner ">
-				<div class="footer__col">
-				 	<ul class="footer__nav">
-				 		<li>
-				 			<a href="#">Каталог</a>
-				 		</li>
-				 		<li>
-				 			<a href="#">О нас</a>
-				 		</li>
-				 		<li>			 			
-				 			<a href="#">Мероприятия</a>
-				 		</li>
-				 		<li>
-				 			<a href="#">Контакты</a>
-				 		</li>
-				 	</ul>
-				</div>
-				<div class="footer__col">
-				 	<span class="footer__contacts">Контакты:</span>
-				 	<a href="tel:+994557916591" class="footer__contacts">
-				 		<span class="bold"><span class="margin">Номер:</span>+994 (55) 791 - 65 - 91</span>
-				 	</a>
-				 	<a href="mailto:khuramankaplan@gmail.com" class="footer__contacts">
-				 		<span class="bold margin">Mail:</span>khuramankaplan@gmail.com
-				 	</a>
-				 	<span class="footer__copyright">© Kaplan Khuraman 2020.</span>
-				 	<span class="footer__all-rights-reserved">Все права защищены</span>
-				</div>
-				<div class="footer__col footer__social__wrapper">
-				 	<div class="footer__social">
-				 		<a href="#" class="footer__social__link">
-				 			<img src="res/svg/footer/fb.svg">
-				 		</a>
-				 		<img class="footer__qr" src="res/svg/fb-qr.svg">
-				 	</div>
-				 	<div class="footer__social">
-				 		<a href="#" class="footer__social__link">
-				 			<img src="res/svg/footer/ig.svg">
-				 		</a>
-				 		<img class="footer__qr" src="res/svg/ig-qr.svg">
-				 	</div>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <header class="header">
+        <div class="pre-header-wrapper">
+            <div class="pre-header custom-container">
+                <div class="pre-header__left">
+                    <span>10.567 - Изделий сделанных вручную</span>
+                </div>
+                <div class="pre-header__right">
+                    <div class="pre-header__right__menu-button" onclick="togglePreHeaderMenu()">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="pre-header__right__content" id="pre-header-menu">
+                        <nav class="pre-header__nav">
+                            <ul>
+                                <li>
+                                    <a href="#">Каталог</a>
+                                </li>
+                                <li>
+                                    <a href="#">О нас</a>
+                                </li>
+                                <li>
+                                    <a href="#">Мероприятия</a>
+                                </li>
+                                <li>
+                                    <a href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <button class="pre-header__lang">
+                            <span>Язык: RU</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header__menu custom-container">
+            <div class="header__menu__left">
+                <a href="#"><img src="res/svg/logo-header.svg"></a>
+            </div>
+            <div class="header__menu__right">
+                <a href="#obodki" class="header__menu__right__item" onclick="showTab('#tab-obodki')">
+                    <div class="header__menu__right__item__icon">
+                        <img src="res/svg/menu/obodki.svg">
+                    </div>
+                    <span class="header__menu__right__item__title">Ободки</span>
+                </a>
+                <a href="#butterflies" class="header__menu__right__item" onclick="showTab('#tab-butterflies')">
+                    <div class="header__menu__right__item__icon">
+                        <img src="res/svg/menu/butterfly.svg">
+                    </div>
+                    <span class="header__menu__right__item__title">Изделия “Бабочки”</span>
+                </a>
+                <a href="#summer" class="header__menu__right__item" onclick="showTab('#tab-summer')">
+                    <div class="header__menu__right__item__icon">
+                        <img src="res/svg/menu/summercol.svg">
+                    </div>
+                    <span class="header__menu__right__item__title">Летняя коллекция</span>
+                </a>
+                <a href="#winter" class="header__menu__right__item" onclick="showTab('#tab-winter')">
+                    <div class="header__menu__right__item__icon">
+                        <img src="res/svg/menu/wintercol.svg">
+                    </div>
+                    <span class="header__menu__right__item__title">Зимняя коллекция</span>
+                </a>
+            </div>
+        </div>
+        <div class="header__bottom">
+            <div class="header__bottom-line"></div>
+        </div>
+    </header>
+    <main>
+        <section class="index-page__section-pics custom-container">
+            <div class="index-page__section-pics__inner pics-tab active" id="tab-obodki">
+                <div class="index-page__section-pics__row">
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic1.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic2.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic3.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic4.png" class="index-page__section-pics__item__pic">
+                        <div class="index-page__section-pics__item__overlay small">
+                            <div class="white-blur"></div>
+                            <p class="index-page__section-pics__item__overlay__text small">
+                                Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
+                            </p>
+                            <button class="index-page__section-pics__item__overlay__buy small" onclick="toggleModal()">
+                                <span>Приобрести</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
+                        <div class="index-page__section-pics__item__overlay">
+                            <div class="white-blur"></div>
+                            <p class="index-page__section-pics__item__overlay__text">
+                                Заколки с бабочками сделанные из шёлка, с нержавеющей сталью
+                            </p>
+                            <button class="index-page__section-pics__item__overlay__buy" onclick="toggleModal()">
+                                <span>Приобрести</span>
+                            </button>
+                        </div>
+                        <div class="index-page__section-pics__item__slider">
+                            <div class="swiper-container" id="pic-slider">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="res/pics/section1/pic5.png" class="index-page__section-pics__item__pic">
+                                    </div>
+                                </div>
+                                <div class="swiper-pagination" id="pic-slider-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="index-page__section-pics__row">
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic6.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic7.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic8.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic9.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic10.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic11.png" class="index-page__section-pics__item__pic">
+                    </div>
+                    <div class="index-page__section-pics__item">
+                        <img src="res/pics/section1/pic12.png" class="index-page__section-pics__item__pic">
+                    </div>
+                </div>
+            </div>
+            <div class="index-page__section-pics__inner pics-tab" id="tab-butterflies">
+            </div>
+            <div class="index-page__section-pics__inner pics-tab" id="tab-summer">
+            </div>
+            <div class="index-page__section-pics__inner pics-tab" id="tab-winter">
+            </div>
+        </section>
+        <section class="index-page__section-about">
+            <div class="custom-container">
+                <div class="index-page__section-about__info-area">
+                    <div class="index-page__section-about__left">
+                        <img src="res/svg/logo-main.svg" alt="Kaplan Khuraman accessories">
+                    </div>
+                    <div class="index-page__section-about__right">
+                        <h2 class="section-header index-page__section-about__right__title">О нас</h2>
+                        <p class="index-page__section-about__info">
+                            Наша компания была основана в 2010 году, дизайнером Хураман. Наша продукция в основном акцентируется на бабочках и вся продукция в свою очередь сделана руками человека! Вся наша продукция высокого качества легко доступна и уникальна.
+                        </p>
+                    </div>
+                </div>
+                <div class="index-page__section-about__materials">
+                    <h4 class="index-page__section-about__materials__title">В нашей продукции присутствуют такие материалы как:</h4>
+                    <div class="index-page__section-about__materials__line"></div>
+                    <div class="index-page__section-about__materials__inner">
+                        <div class="index-page__section-about__materials__left">
+                            <div class="index-page__section-about__materials__row">
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Шелк</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Хлопок</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Камень “SWAROVSKI”</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Лунный камень</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Хлопок</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Камень “SWAROVSKI”</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Лунный камень</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Шелк</span>
+                                </div>
+                            </div>
+                            <div class="index-page__section-about__materials__row">
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Хлопок</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Камень “SWAROVSKI”</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Лунный камень</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Хлопок</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Камень “SWAROVSKI”</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Лунный камень</span>
+                                </div>
+                                <div class="index-page__section-about__materials__item">
+                                    <span>Лунный камень</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="index-page__section-about__materials__right">
+                            <img src="res/svg/logo-faded.svg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="index-page__section-events custom-container">
+            <h2 class="section-header index-page__section-events__title">Мероприятия</h2>
+            <span class="index-page__section-events__subtitle">С момента основания мы учавствовали во многих мероприятиях.</span>
+            <a href="#" class="index-page__section-events__card">
+                <img src="res/pics/section3/pic1.png">
+                <p>
+                    В 2018 году наша продукция была представлена на знаменитой выставке моды “AZERBAIJAN FASHION WEEK”
+                </p>
+            </a>
+            <a href="#" class="index-page__section-events__card flipped">
+                <img src="res/pics/section3/pic2.png">
+                <p>
+                    В 2018 году наша продукция была представлена на знаменитой выставке моды “AZERBAIJAN FASHION WEEK”
+                </p>
+            </a>
+        </section>
+        <section class="index-page__section-contacts">
+            <div class="intex-page__section-contacts__inner custom-container">
+                <h2 class="section-header index-page__section-contacts__title">Контакты</h2>
+                <div class="index-page__section-contacts__info-area">
+                    <div class="index-page__section-contacts__left">
+                        <div class="index-page__section-contacts__info">
+                            <a href="tel:+994557916591" class="index-page__section-contacts__info__item">
+                                <span class="bold">Номер:</span>+994 (55) 791 - 65 - 91
+                            </a>
+                            <a href="mailto:khuramankaplan@gmail.com" class="index-page__section-contacts__info__item">
+                                <span class="bold">Mail:</span>khuramankaplan@gmail.com
+                            </a>
+                        </div>
+                        <div class="index-page__section-contacts__info__card">
+                            <div class="index-page__section-contacts__info__card__inner">
+                                <span>Также можете позвонить нам и мы сделаем ваш аксессуар на заказ!</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="index-page__section-contacts__right">
+                        <div class="index-page__section-contacts__right__links">
+                            <div class="index-page__section-contacts__right__link__wrapper">
+                                <a href="#" class="index-page__section-contacts__right__link">
+                                    <img src="res/svg/contacts/fb.svg">
+                                </a>
+                            </div>
+                            <div class="index-page__section-contacts__right__link__wrapper">
+                                <a href="#" class="index-page__section-contacts__right__link">
+                                    <img src="res/svg/contacts/ig.svg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="index-page__section-contacts__right__qrs">
+                            <img src="res/svg/fb-qr.svg">
+                            <img src="res/svg/ig-qr.svg">
+                        </div>
+                    </div>
+                </div>
+                <form method="post" class="index-page__section-contacts__mailing-area">
+                    <div class="index-page__section-contacts__mailing">
+                        <span>Оcтавьте ваш email для получения рассылки о новых товарах</span>
+                    </div>
+                    <div class="index-page__section-contacts__mailing__input-area">
+                        <input type="text" name="name" placeholder="Ваше имя">
+                        <input type="email" name="name" placeholder="Ваш email">
+                    </div>
+                    <button class="index-page__section-contacts__mailing__send">
+                        <span>Отправить</span>
+                    </button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="footer desktop">
+        <div class="custom-container">
+            <div class="footer__inner ">
+                <div class="footer__col">
+                    <ul class="footer__nav">
+                        <li>
+                            <a href="#">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Мероприятия</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <span class="footer__contacts">Контакты:</span>
+                    <a href="tel:+994557916591" class="footer__contacts">
+                        <span class="bold"><span class="margin">Номер:</span>+994 (55) 791 - 65 - 91</span>
+                    </a>
+                    <a href="mailto:khuramankaplan@gmail.com" class="footer__contacts">
+                        <span class="bold margin">Mail:</span>khuramankaplan@gmail.com
+                    </a>
+                    <span class="footer__copyright">© Kaplan Khuraman 2020.</span>
+                    <span class="footer__all-rights-reserved">Все права защищены</span>
+                </div>
+                <div class="footer__col footer__social__wrapper">
+                    <div class="footer__social">
+                        <a href="#" class="footer__social__link">
+                            <img src="res/svg/footer/fb.svg">
+                        </a>
+                        <img class="footer__qr" src="res/svg/fb-qr.svg">
+                    </div>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social__link">
+                            <img src="res/svg/footer/ig.svg">
+                        </a>
+                        <img class="footer__qr" src="res/svg/ig-qr.svg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer mobile">
+        <div class="custom-container">
+            <div class="footer__inner ">
+                <div class="footer__col">
+                    <ul class="footer__nav">
+                        <li>
+                            <a href="#">Каталог</a>
+                        </li>
+                        <li>
+                            <a href="#">О нас</a>
+                        </li>
+                        <li>
+                            <a href="#">Мероприятия</a>
+                        </li>
+                        <li>
+                            <a href="#">Контакты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer__col footer__social__wrapper">
+                    <div class="footer__social">
+                        <a href="#" class="footer__social__link">
+                            <img src="res/svg/footer/fb.svg">
+                        </a>
+                        <img class="footer__qr" src="res/svg/fb-qr.svg">
+                    </div>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social__link">
+                            <img src="res/svg/footer/ig.svg">
+                        </a>
+                        <img class="footer__qr" src="res/svg/ig-qr.svg">
+                    </div>
+                </div>
+                <div class="footer__col">
+                    <span class="footer__contacts">Контакты:</span>
+                    <a href="tel:+994557916591" class="footer__contacts">
+                        <span class="bold"><span class="margin">Номер:</span>+994 (55) 791 - 65 - 91</span>
+                    </a>
+                    <a href="mailto:khuramankaplan@gmail.com" class="footer__contacts">
+                        <span class="bold margin">Mail:</span>khuramankaplan@gmail.com
+                    </a>
+                    <span class="footer__copyright">© Kaplan Khuraman 2020.</span>
+                    <span class="footer__all-rights-reserved">Все права защищены</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="modal-buy content-hidden" id="modal" style="display: none;">
+        <div class="modal-buy__bg" onclick="toggleModal()"></div>
+        <div class="modal-buy__card">
+            <div class="modal-buy__card__wrapper">
+                <div class="modal-buy__close-button" onclick="toggleModal()">
+                    <img src="res/svg/close.svg">
+                </div>
+                <div class="swiper-container" id="modal-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="modal-buy__card__bg" src="res/pics/modal-bg.png">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="modal-buy__card__bg" src="res/pics/modal-bg.png">
+                        </div>
+                    </div>
+                    <div class="swiper-pagination" id="modal-slider-pagination"></div>
+                    <button class="modal-buy__button only" onclick="modalButton()">
+                        <span>45 azn</span>
+                    </button>
+                </div>
+                <div class="modal-buy__card__inner">
+                    <div class="white-blur"></div>
+                    <div class="modal-buy__card__content">
+                        <h2 class="modal-buy__title">Заколки с бабочками сделанные из шёлка, с нержавеющей сталью</h2>
+                        <div class="modal-buy__subtitle-line"></div>
+                        <form class="modal-buy__form">
+                            <div class="modal-buy__form__three-in-a-row">
+                                <div class="modal-buy__form__input-area">
+                                    <span>Имя</span>
+                                    <input type="text" name="first-name" placeholder="Введите имя" required>
+                                </div>
+                                <div class="modal-buy__form__input-area">
+                                    <span>Фамилия</span>
+                                    <input type="text" name="last-name" placeholder="Введите фамилию" required>
+                                </div>
+                                <div class="modal-buy__form__input-area">
+                                    <span>Мобильный телефон</span>
+                                    <input type="text" name="phone" placeholder="+994 (__) ___ __ __" required>
+                                </div>
+                            </div>
+                            <div class="modal-buy__bottom-input-area">
+                                <div class="modal-buy__form__input-area">
+                                    <span>Адрес доставки</span>
+                                    <textarea placeholder="Введите ваш адрес" maxlength="300" required></textarea>
+                                </div>
+                            </div>
+                            <button class="modal-buy__button" onclick="modalButton()">
+                                <span>45 azn</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<footer class="footer mobile">
-		<div class="custom-container">
-			<div class="footer__inner ">
-				<div class="footer__col">
-				 	<ul class="footer__nav">
-				 		<li>
-				 			<a href="#">Каталог</a>
-				 		</li>
-				 		<li>
-				 			<a href="#">О нас</a>
-				 		</li>
-				 		<li>			 			
-				 			<a href="#">Мероприятия</a>
-				 		</li>
-				 		<li>
-				 			<a href="#">Контакты</a>
-				 		</li>
-				 	</ul>
-				</div>
-				<div class="footer__col footer__social__wrapper">
-				 	<div class="footer__social">
-				 		<a href="#" class="footer__social__link">
-				 			<img src="res/svg/footer/fb.svg">
-				 		</a>
-				 		<img class="footer__qr" src="res/svg/fb-qr.svg">
-				 	</div>
-				 	<div class="footer__social">
-				 		<a href="#" class="footer__social__link">
-				 			<img src="res/svg/footer/ig.svg">
-				 		</a>
-				 		<img class="footer__qr" src="res/svg/ig-qr.svg">
-				 	</div>
-				</div>
-				<div class="footer__col">
-				 	<span class="footer__contacts">Контакты:</span>
-				 	<a href="tel:+994557916591" class="footer__contacts">
-				 		<span class="bold"><span class="margin">Номер:</span>+994 (55) 791 - 65 - 91</span>
-				 	</a>
-				 	<a href="mailto:khuramankaplan@gmail.com" class="footer__contacts">
-				 		<span class="bold margin">Mail:</span>khuramankaplan@gmail.com
-				 	</a>
-				 	<span class="footer__copyright">© Kaplan Khuraman 2020.</span>
-				 	<span class="footer__all-rights-reserved">Все права защищены</span>
-				</div>
-			</div>
-		</div>
-	</footer>
+    <script src="https://unpkg.com/swiper/js/swiper.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script type="text/javascript">
+    let isMobile = false;
 
-	<div class="modal-buy content-hidden" id="modal" style="display: none;">
-		<div class="modal-buy__bg" onclick="toggleModal()"></div>
-		<div class="modal-buy__card">
-			<div class="modal-buy__card__wrapper">
-				<div class="modal-buy__close-button" onclick="toggleModal()">
-					<img src="res/svg/close.svg">
-				</div>
-				<div class="swiper-container" id="modal-slider">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<img class="modal-buy__card__bg" src="res/pics/modal-bg.png">
-						</div>
-						<div class="swiper-slide">
-							<img class="modal-buy__card__bg" src="res/pics/modal-bg.png">
-						</div>
-					</div>
-					<div class="swiper-pagination" id="modal-slider-pagination"></div>
-					<button class="modal-buy__button only" onclick="modalButton()">
-						<span>45 azn</span>
-					</button>
-				</div>
-				<div class="modal-buy__card__inner">
-					<div class="white-blur"></div>
-					<div class="modal-buy__card__content">
-						<h2 class="modal-buy__title">Заколки с бабочками сделанные из шёлка, с нержавеющей сталью</h2>
-						<div class="modal-buy__subtitle-line"></div>
-						<form class="modal-buy__form">
-							<div class="modal-buy__form__three-in-a-row">
-								<div class="modal-buy__form__input-area">
-									<span>Имя</span>
-									<input type="text" name="first-name" placeholder="Введите имя" required>
-								</div>
-								<div class="modal-buy__form__input-area">
-									<span>Фамилия</span>
-									<input type="text" name="last-name" placeholder="Введите фамилию" required>
-								</div>
-								<div class="modal-buy__form__input-area">
-									<span>Мобильный телефон</span>
-									<input type="text" name="phone" placeholder="+994 (__) ___ __ __" required>
-								</div>
-							</div>
-							<div class="modal-buy__bottom-input-area">
-								<div class="modal-buy__form__input-area">
-									<span>Адрес доставки</span>
-									<textarea placeholder="Введите ваш адрес" maxlength="300" required></textarea>
-								</div>
-							</div>
-							<button class="modal-buy__button" onclick="modalButton()">
-								<span>45 azn</span>
-							</button>
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    function watchForHover() {
+        let hasHoverClass = false;
+        let container = document.body;
+        let lastTouchTime = 0;
 
-	<script src="https://unpkg.com/swiper/js/swiper.js"></script>
-	<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
-	<script type="text/javascript">
-		let mySwiper = new Swiper('#pic-slider', {
-			slidesPerView: 1,
-			loop: true,
-			pagination: {
-				el: '#pic-slider-pagination',
-				clickable: true
-			}
-		});
+        function enableHover() {
+            // discard emulated mouseMove events coming from touch events
+            if (new Date() - lastTouchTime < 500) return;
+            if (hasHoverClass) return;
 
-		let mySwiper2 = new Swiper('#modal-slider', {
-			slidesPerView: 1,
-			observer: true,
-			observeParents: true,
-			loop: true,
-			pagination: {
-				el: '#modal-slider-pagination',
-				clickable: true
-			}
-		});
+            container.className = container.className.replace('touch', '');
+            hasHoverClass = true;
+            isMobile = true;
+        }
 
-		let isPreHeaderMenuOpen = false;
-		const togglePreHeaderMenu = () => {
-			if (window.innerWidth <= 800) {
-				if (isPreHeaderMenuOpen)
-					document.querySelector('#pre-header-menu').classList.remove('active');
-				else document.querySelector('#pre-header-menu').classList.add('active');
-				
-				isPreHeaderMenuOpen = !isPreHeaderMenuOpen;
-			}
-		}
+        function disableHover() {
+            if (!hasHoverClass) return;
 
-		let isModalContentShown = false;
-		const modalButton = () => {
-			if (!isModalContentShown) {
-				isModalContentShown = true;
-				document.querySelector('#modal').classList.remove('content-hidden');
-				return;
-			}
-		}
+            container.className += 'touch';
+            hasHoverClass = false;
+            isMobile = false;
+        }
 
-		let isModalOpen = false;
-		const toggleModal = () => {
-			if (!isModalOpen)
-				document.querySelector('#modal').style.display = '';
-			else document.querySelector('#modal').style.display = 'none';
-			
-			isModalOpen = !isModalOpen;
-			isModalContentShown = false;
-			document.querySelector('#modal').classList.add('content-hidden');
-		}
+        function updateLastTouchTime() {
+            lastTouchTime = new Date();
+        }
 
-		let shownTab = '#tab-obodki';
-		const showTab = (tabId) => {
-			document.querySelector(shownTab).classList.remove('active');
-			document.querySelector(tabId).classList.add('active');
-			shownTab = tabId;
-		} 
-	</script>
+        document.addEventListener('touchstart', updateLastTouchTime, true);
+        document.addEventListener('touchstart', disableHover, true);
+        document.addEventListener('mousemove', enableHover, true);
+
+        enableHover();
+    }
+
+    watchForHover();
+
+    let mySwiper = new Swiper('#pic-slider', {
+        slidesPerView: 1,
+        loop: true,
+        pagination: {
+            el: '#pic-slider-pagination',
+            clickable: true
+        }
+    });
+
+    let mySwiper2 = new Swiper('#modal-slider', {
+        slidesPerView: 1,
+        observer: true,
+        observeParents: true,
+        loop: true,
+        pagination: {
+            el: '#modal-slider-pagination',
+            clickable: true
+        }
+    });
+
+    let isPreHeaderMenuOpen = false;
+    const togglePreHeaderMenu = () => {
+        if (window.innerWidth <= 800) {
+            if (isPreHeaderMenuOpen)
+                document.querySelector('#pre-header-menu').classList.remove('active');
+            else document.querySelector('#pre-header-menu').classList.add('active');
+
+            isPreHeaderMenuOpen = !isPreHeaderMenuOpen;
+        }
+    }
+
+    let isModalContentShown = false;
+    const modalButton = () => {
+        if (!isModalContentShown) {
+            isModalContentShown = true;
+            document.querySelector('#modal').classList.remove('content-hidden');
+            return;
+        }
+    }
+
+    let isModalOpen = false;
+    const toggleModal = () => {
+        if (!isModalOpen)
+            document.querySelector('#modal').style.display = '';
+        else document.querySelector('#modal').style.display = 'none';
+
+        isModalOpen = !isModalOpen;
+        isModalContentShown = false;
+        document.querySelector('#modal').classList.add('content-hidden');
+    }
+
+    let shownTab = '#tab-obodki';
+    const showTab = (tabId) => {
+        document.querySelector(shownTab).classList.remove('active');
+        document.querySelector(tabId).classList.add('active');
+        shownTab = tabId;
+    }
+
+    if (isMobile) {
+        const tabs = document.querySelectorAll('.pics-tab');
+        const materials = document.querySelectorAll('.index-page__section-about__materials__left')
+        const sliders = document.querySelectorAll('.swiper-container');
+        let isDown = false;
+        let isDownOnSlider = false;
+        let startX;
+        let scrollLeft;
+
+        sliders.forEach(slider => {
+        	slider.addEventListener('mousedown', () => {
+        		isDownOnSlider = true;
+        	});
+        	slider.addEventListener('mouseup', () => {
+        		isDownOnSlider = false;
+        	});
+        });
+
+        function dragOnElem(elems) {
+	        elems.forEach(el => {
+	            el.addEventListener('mousedown', (e) => {
+	                isDown = true;
+	                startX = e.pageX - el.offsetLeft;
+	                scrollLeft = el.scrollLeft;
+	            });
+	            el.addEventListener('mouseleave', () => {
+	                isDown = false;
+	            });
+	            el.addEventListener('mouseup', () => {
+	                isDown = false;
+	            });
+	            el.addEventListener('mousemove', (e) => {
+	                if (!isDown || isDownOnSlider) return;
+	                e.preventDefault();
+	                const x = e.pageX - el.offsetLeft;
+	                const walk = (x - startX); //scroll-fast
+	                el.scrollLeft = scrollLeft - walk;
+	            });
+	        });
+	    }
+
+	    dragOnElem(tabs);
+	    dragOnElem(materials);
+    }
+    </script>
 </body>
+
 </html>
