@@ -162,6 +162,11 @@ input {
 
 			&__inner {
 				margin-top: 5px;
+				display: none;
+
+				&.active {
+					display: block;
+				}
 			}
 
 			&__row {

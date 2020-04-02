@@ -50,25 +50,25 @@
 				<a href="#"><img src="res/svg/logo-header.svg"></a>
 			</div>
 			<div class="header__menu__right">
-				<a href="#" class="header__menu__right__item">
+				<a href="#obodki" class="header__menu__right__item" onclick="showTab('#tab-obodki')">
 					<div class="header__menu__right__item__icon">
 						<img src="res/svg/menu/obodki.svg">
 					</div>
 					<span class="header__menu__right__item__title">Ободки</span>
 				</a>
-				<a href="#" class="header__menu__right__item">
+				<a href="#butterflies" class="header__menu__right__item" onclick="showTab('#tab-butterflies')">
 					<div class="header__menu__right__item__icon">
 						<img src="res/svg/menu/butterfly.svg">
 					</div>
 					<span class="header__menu__right__item__title">Изделия “Бабочки”</span>
 				</a>
-				<a href="#" class="header__menu__right__item">
+				<a href="#summer" class="header__menu__right__item" onclick="showTab('#tab-summer')">
 					<div class="header__menu__right__item__icon">
 						<img src="res/svg/menu/summercol.svg">
 					</div>
 					<span class="header__menu__right__item__title">Летняя коллекция</span>
 				</a>
-				<a href="#" class="header__menu__right__item">
+				<a href="#winter" class="header__menu__right__item" onclick="showTab('#tab-winter')">
 					<div class="header__menu__right__item__icon">
 						<img src="res/svg/menu/wintercol.svg">
 					</div>
@@ -82,7 +82,7 @@
 	</header>
 	<main>
 		<section class="index-page__section-pics custom-container">
-			<div class="index-page__section-pics__inner">
+			<div class="index-page__section-pics__inner pics-tab active" id="tab-obodki">
 				<div class="index-page__section-pics__row">
 					<div class="index-page__section-pics__item">
 						<img src="res/pics/section1/pic1.png" class="index-page__section-pics__item__pic">
@@ -154,6 +154,12 @@
 						<img src="res/pics/section1/pic12.png" class="index-page__section-pics__item__pic">
 					</div>
 				</div>
+			</div>
+			<div class="index-page__section-pics__inner pics-tab" id="tab-butterflies">
+			</div>
+			<div class="index-page__section-pics__inner pics-tab" id="tab-summer">
+			</div>
+			<div class="index-page__section-pics__inner pics-tab" id="tab-winter">
 			</div>
 		</section>
 		<section class="index-page__section-about">
@@ -506,6 +512,13 @@
 			isModalContentShown = false;
 			document.querySelector('#modal').classList.add('content-hidden');
 		}
+
+		let shownTab = '#tab-obodki';
+		const showTab = (tabId) => {
+			document.querySelector(shownTab).classList.remove('active');
+			document.querySelector(tabId).classList.add('active');
+			shownTab = tabId;
+		} 
 	</script>
 </body>
 </html>
