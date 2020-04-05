@@ -40,9 +40,17 @@
                                 </li>
                             </ul>
                         </nav>
-                        <button class="pre-header__lang">
-                            <span>Язык: RU</span>
-                        </button>
+                        <div class="pre-header__lang-area">
+                            <button class="pre-header__lang" onclick="toggleLangs()">
+                                <span>Язык: <span id="lang">RU</span></span>
+                            </button>
+                            <div class="pre-header__lang__content" id="lang-content">
+                                <ul>
+                                    <li onclick="chooseLang('RU')">RU</li>
+                                    <li onclick="chooseLang('AZ')">AZ</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -646,6 +654,20 @@
         document.querySelector(shownTab).classList.remove('active');
         document.querySelector(tabId).classList.add('active');
         shownTab = tabId;
+    }
+
+    let langsShown = false,
+        chosenLang = 'RU';
+    const toggleLangs = () => {
+        if (langsShown)
+            document.querySelector('#lang-content').classList.remove('active');
+        else document.querySelector('#lang-content').classList.add('active');
+        langsShown = !langsShown;
+    }
+    const chooseLang = lang => {
+        chosenLang = lang;
+        document.querySelector('#lang').innerHTML = lang;
+        toggleLangs();
     }
 
     if (isMobile) {

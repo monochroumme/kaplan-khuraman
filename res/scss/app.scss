@@ -87,8 +87,6 @@ input {
 	}
 
 	&__lang {
-		margin-left: 110px;
-		margin-right: 70px;
 		color: white;
 		background: #8D387B;
 		width: 100px;
@@ -96,6 +94,54 @@ input {
 		border: none;
 		cursor: pointer;
 		@include flex-center;
+
+		&:focus {
+			outline: none;
+		}
+
+		&-area {
+			margin-left: 110px;
+			margin-right: 70px;
+			position: relative;
+		}
+
+		&__content {
+			position: absolute;
+			top: 25px;
+			left: 0;
+			background: white;
+			border: 1px solid #6b1058;
+			width: 100%;
+			z-index: 2;
+			display: none;
+
+			&.active {
+				display: block;
+			}
+
+			ul {
+				margin: 0;
+				padding: 0;
+				list-style-type: none;
+				text-align: center;
+
+				li {
+					cursor: pointer;
+					margin-bottom: 0px;
+					padding: 10px 15px;
+					color: #5c2d52;
+
+					&:last-of-type {
+						margin-bottom: 0;
+					}
+
+					&:hover {
+						color: white;
+						background: #6b1058;
+					}
+				}
+			}
+		}
 	}
 }
 
@@ -1063,8 +1109,10 @@ input {
 @media (max-width: 1000px) {
 	.pre-header {
 		&__lang {
-			margin-left: 20px;
-			margin-right: 0;
+			&-area {
+				margin-left: 20px;
+				margin-right: 0;
+			}
 		}
 	}
 
@@ -1311,7 +1359,9 @@ input {
 		}
 
 		&__lang {
-			margin: 0;
+			&-area {
+				margin: 0;
+			}
 		}
 	}
 
